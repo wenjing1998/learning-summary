@@ -3,6 +3,8 @@
 // 用于区分普通 js 脚本还是一个模块。
 // 即声明：该文件使用 ES modules 模块化规范，可以使用 import 载入模块，使用 export default 导出模块。
 
+console.log('index.js');
+
 import createElement from './heading.js';
 const element = createElement();
 document.body.appendChild(element);
