@@ -1,0 +1,7 @@
+/* 验证 webpack 默认只能识别 js 语法（实际还有 json 语法） */
+
+/* console.log('This is a style sheet.'); */
+
+body {
+  border: 1px solid black;
+}
