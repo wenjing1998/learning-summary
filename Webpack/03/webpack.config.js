@@ -2,7 +2,7 @@ const path = require('path');
 
 
 module.exports = {
-  // Webpack 直接打包 css 资源文件
+  // Webpack 直接打包非 js 资源文件
   entry: './src/main.md',
 
   output: {
