@@ -1,6 +1,6 @@
 class RemoveCommentsPlugin {
-  // 为啥是 apply 方法？？？
   apply(compiler) {
+    // console.log('RemoveCommentsPlugin apply');
     // console.log('compiler', compiler); // 此次构建所有的配置信息
 
     // 在什么时机执行 | 把任务放到哪个钩子上

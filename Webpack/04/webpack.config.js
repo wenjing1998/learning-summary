@@ -8,15 +8,18 @@ const path = require('path');
 // 拷贝
 // const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-// 自定义插件
-const RemoveCommentsPlugin = require('./remove-comments-plugin');
+// 自定义插件 - 去除注释
+// const RemoveCommentsPlugin = require('./remove-comments-plugin');
+
+// 自定义插件 - 展示打包文件列表
+const ShowFileListPlugin = require('./show-fileList-plugin');
 
 module.exports = {
   entry: './src/index.js',
 
   output: {
-    path: path.resolve(__dirname, 'dist-remove-comments-plugin'),
-    filename: 'Webpack-04-src-new-index.bundle.js'
+    path: path.resolve(__dirname, 'dist-show-fileList-plugin'),
+    filename: 'Webpack-04-src-index.bundle.js'
   },
 
   mode: 'none',
@@ -54,6 +57,9 @@ module.exports = {
     //     concurrency: 100 // 同一时间内资源请求的数量限制，默认 100
     //   }
     // }),
-    new RemoveCommentsPlugin()
+    // new RemoveCommentsPlugin() // 实例对象，typeof 值为 object
+    new ShowFileListPlugin({
+      size: 100
+    })
   ]
 };

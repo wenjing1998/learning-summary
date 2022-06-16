@@ -3,7 +3,9 @@ const marked = require('marked');
 // console.log('marked', marked);
 
 // commonjs 导入导出方式
-module.exports = source => {
+// module.exports = source => {
+// 优化：不要写成箭头函数，因为 loader 内部的属性和方法，需要通过 this 进行调用，比如默认开启 loader 缓存，配制 this.cacheable(false) 来关掉缓存。（还不是很了解？？？）
+module.exports = function(source, sourceMap) {  
   // 加载到的模块内容
   console.log('source', source);
   // 返回值就是最终被打包的内容，必须为 js 代码
