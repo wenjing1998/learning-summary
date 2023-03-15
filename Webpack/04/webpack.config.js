@@ -24,7 +24,7 @@ module.exports = {
 
   mode: 'none',
 
-  // 插件
+  // 插件（实例的数组）
   plugins: [
     // 类型构建一个实例
     // new CleanWebpackPlugin ??? 使用类创建一个实例为啥还要加括号？？

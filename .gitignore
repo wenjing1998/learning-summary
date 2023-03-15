@@ -1,0 +1,15 @@
+# misc
+.DS_Store
+
+# tool
+.docz/
+
+# dependencies
+node_modules
+/npm-debug.log*
+/yarn-error.log
+/package-lock.json
+
+#history
+.history
+coverage/
